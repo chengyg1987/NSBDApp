@@ -41,6 +41,7 @@ namespace Genersoft.Drp.NSBDApp.Core
                 string billID =  Convert.ToString(bizData.Tables[0].Rows[0]["ROBXDJ_NM"]);
 
                 //各功能根据业务向LSMobileButtonConf表预制数据，调用下面方法时选择对应的功能ID即可
+                //当然前提是已经修改intergrationcenter中的adapter
                 DataSet ds = MobileQueryManager.GetConfSet(EnumClass.MyFuncEnum.MobileJFD.ToString(), "UM");
 
                 string html = string.Empty;
